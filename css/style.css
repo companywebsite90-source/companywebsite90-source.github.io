@@ -102,6 +102,31 @@ a:hover { text-decoration: underline; }
   color: #fff; font-size: 1.5rem; line-height: 1;
 }
 
+/* push nav links + language toggle to the right */
+.nav-links { margin-left: auto; }
+
+/* language (EN/AR) toggle button */
+.lang-toggle {
+  margin-left: 14px;
+  flex: none;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+  color: #fff;
+  border: 0;
+  font-weight: 700;
+  font-size: .9rem;
+  padding: 8px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.lang-toggle:hover { filter: brightness(1.08); }
+
+/* ---------- Right-to-left (Arabic) adjustments ---------- */
+[dir="rtl"] .nav-links { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .lang-toggle { margin-left: 0; margin-right: 14px; }
+[dir="rtl"] .split .panel ul { padding-left: 0; padding-right: 18px; }
+[dir="rtl"] .info-list li { flex-direction: row-reverse; }
+
 /* ---------- Buttons ---------- */
 .btn {
   display: inline-block;
