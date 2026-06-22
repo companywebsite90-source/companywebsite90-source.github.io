@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — Sparkon Labs</title>
+  <meta name="description" content="Get in touch with Sparkon Labs. Send us your details and we'll get back to you at companywebsite90@gmail.com." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container">
+      <a class="brand" href="index.html"><img src="sparkon_logo.png" alt="Sparkon Labs" /></a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="index.html">About</a></li>
+        <li><a href="core-values.html">Core Values</a></li>
+        <li><a href="domain-expertise.html">Domain Expertise</a></li>
+        <li><a href="services-ai-software.html">AI &amp; Software</a></li>
+        <li><a href="services-hardware-design.html">Hardware &amp; Design</a></li>
+        <li><a href="services-education.html">Education</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <section class="page-head">
+    <div class="container">
+      <span class="kicker">Sparkon Labs · 2026</span>
+      <h1>Contact Us</h1>
+      <p>We'd love to hear your thoughts and answer any questions you may have. Fill in your details below and we'll get back to you.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-wrap">
+
+        <!-- Contact form -->
+        <div class="form-card">
+          <h2 style="margin-top:0">Send us a message</h2>
+          <p class="sub" style="margin-bottom:24px">
+            Tell us about your project, classroom, or question — robotics kits, AI, hardware, or anything in between.
+          </p>
+
+          <form id="contactForm">
+            <div class="field">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Doe" required />
+            </div>
+            <div class="field">
+              <label for="email">Your email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            </div>
+            <div class="field">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="I'd like to know more about your robotics kits" required />
+            </div>
+            <div class="field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="note" id="formNote">
+              This opens your email app with the message addressed to
+              <a href="mailto:companywebsite90@gmail.com">companywebsite90@gmail.com</a>.
+            </p>
+          </form>
+        </div>
+
+        <!-- Contact info -->
+        <div>
+          <h2 style="margin-top:0">Reach out directly</h2>
+          <p class="sub">Prefer email? You can contact our team directly any time.</p>
+          <ul class="info-list">
+            <li>
+              <span class="ico">✉️</span>
+              <div>
+                <strong>Email</strong><br />
+                <a href="mailto:companywebsite90@gmail.com">companywebsite90@gmail.com</a>
+              </div>
+            </li>
+            <li>
+              <span class="ico">🤖</span>
+              <div>
+                <strong>What we do</strong><br />
+                Robotics &amp; STEM kits, AI &amp; software, hardware &amp; design, and education services.
+              </div>
+            </li>
+            <li>
+              <span class="ico">⏱️</span>
+              <div>
+                <strong>Response time</strong><br />
+                We aim to reply to every message within 1–2 business days.
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div class="fcol" style="max-width:320px">
+          <div class="brand"><img src="sparkon_logo.png" alt="Sparkon Labs" /></div>
+          <p>Intelligent systems and robotics kits — bridging digital intelligence with physical execution.</p>
+        </div>
+        <div class="fcol">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="core-values.html">Core Values</a></li>
+            <li><a href="domain-expertise.html">Domain Expertise</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services-ai-software.html">AI &amp; Software</a></li>
+            <li><a href="services-hardware-design.html">Hardware &amp; Design</a></li>
+            <li><a href="services-education.html">Education</a></li>
+          </ul>
+        </div>
+        <div class="fcol">
+          <h4>Get in touch</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:companywebsite90@gmail.com">companywebsite90@gmail.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copy">© 2026 Sparkon Labs. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Build a mailto: link from the form and open the user's email client.
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('name').value.trim();
+      var email = document.getElementById('email').value.trim();
+      var subject = document.getElementById('subject').value.trim();
+      var message = document.getElementById('message').value.trim();
+
+      var body =
+        'Name: ' + name + '\n' +
+        'Email: ' + email + '\n\n' +
+        message;
+
+      var mailto = 'mailto:companywebsite90@gmail.com' +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      window.location.href = mailto;
+
+      var note = document.getElementById('formNote');
+      note.innerHTML = 'Your email app should now be opening. ' +
+        'If it does not, email us directly at ' +
+        '<a href="mailto:companywebsite90@gmail.com">companywebsite90@gmail.com</a>.';
+    });
+  </script>
+</body>
+</html>

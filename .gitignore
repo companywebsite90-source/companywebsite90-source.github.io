@@ -1,0 +1,7 @@
+# Source material — not part of the published site
+*.pdf
+
+# OS / editor cruft
+.DS_Store
+__pycache__/
+*.pyc
