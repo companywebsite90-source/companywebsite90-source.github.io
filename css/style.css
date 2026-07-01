@@ -159,6 +159,8 @@ a:hover { text-decoration: underline; }
   background:
     radial-gradient(1200px 500px at 80% -10%, rgba(99,102,241,.35), transparent 60%),
     radial-gradient(900px 500px at 0% 10%, rgba(14,165,233,.30), transparent 55%),
+    linear-gradient(rgba(11,16,32,.50), rgba(11,16,32,.64)),
+    url("../sparkon_labs_logo.png") center bottom / cover no-repeat,
     var(--bg);
   color: #fff;
   padding: 86px 0 96px;
@@ -190,9 +192,11 @@ a:hover { text-decoration: underline; }
 .page-head {
   background:
     radial-gradient(900px 400px at 90% -20%, rgba(99,102,241,.30), transparent 60%),
+    linear-gradient(rgba(11,16,32,.52), rgba(11,16,32,.66)),
+    url("../sparkon_labs_logo.png") center bottom / cover no-repeat,
     var(--bg);
   color: #fff;
-  padding: 60px 0 64px;
+  padding: 180px 0 190px;
 }
 .page-head .kicker {
   color: var(--accent);
